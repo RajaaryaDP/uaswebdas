@@ -1,0 +1,603 @@
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#dcdcdc;
+    font-family:'Poppins',sans-serif;
+    color:#111;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar{
+    background:#000;
+    color:white;
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 50px;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.search-box{
+    width:220px;
+}
+
+.search-box input{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid #777;
+    color:white;
+    padding:10px;
+    outline:none;
+}
+
+.search-box input::placeholder{
+    color:#ccc;
+}
+
+.logo{
+    width:80px;
+}
+
+.logo img{
+    width:100%;
+    object-fit:cover;
+}
+
+.nav-btn{
+    display:flex;
+    gap:12px;
+}
+
+.nav-btn button{
+    border:none;
+    padding:10px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:500;
+}
+
+.store-btn{
+    background:#333;
+    color:white;
+}
+
+.ticket-btn{
+    background:#4ed0ff;
+    color:white;
+}
+
+/* =====================================
+   MENU
+===================================== */
+
+.menu{
+    background:#000;
+    padding:18px 0;
+}
+
+.menu ul{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+}
+
+.menu a{
+    color:white;
+    font-family:'Cinzel',serif;
+    font-size:14px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#4ed0ff;
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+    position:relative;
+    height:520px;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-card{
+    position:absolute;
+    right:0;
+    bottom:-50px;
+
+    width:450px;
+    background:#2d2a2a;
+    color:white;
+    z-index:100;
+
+    display:flex;
+    justify-content:space-between;
+
+    padding:30px;
+}
+
+.hero-content{
+    width:55%;
+}
+
+.hero-content h3{
+    font-family:'Cinzel',serif;
+    line-height:1.8;
+    font-size:20px;
+}
+
+.hero-content p{
+    margin-top:8px;
+    font-size:13px;
+}
+
+.hero-action{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero-action button{
+    border:none;
+    border-radius:30px;
+    padding:10px 18px;
+    cursor:pointer;
+}
+
+.hero-action button:first-child{
+    background:#4ed0ff;
+    color:white;
+}
+
+.hero-action button:last-child{
+    background:white;
+}
+
+/* =====================================
+   ABOUT
+===================================== */
+
+.about{
+    background:#e3e3e3;
+    padding:70px 110px;
+}
+
+.section-title{
+    margin-bottom:20px;
+}
+
+.section-title h2{
+    font-family:'Cinzel',serif;
+    font-size:42px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+
+.about p{
+    max-width:1100px;
+    line-height:1.8;
+    font-size:15px;
+}
+
+/* =====================================
+   UNESCO TITLE
+===================================== */
+
+.unesco-title{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.unesco-title p{
+    letter-spacing:4px;
+    font-size:18px;
+}
+
+.unesco-title h2{
+    font-family:'Cinzel',serif;
+    font-size:48px;
+    margin-top:10px;
+}
+
+.unesco img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+/* =====================================
+   INFO SECTION
+===================================== */
+
+.info{
+    position:relative;
+    background:#dcdcdc;
+    overflow:hidden;
+}
+
+/* wave background */
+
+.wave-shape{
+    height:350px;
+    position:relative;
+}
+
+.wave-shape::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#8a9300;
+    border-radius:50%;
+    left:120px;
+    top:30px;
+}
+
+.wave-shape::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#256977;
+    border-radius:50%;
+    left:500px;
+    top:0;
+}
+
+.info-header{
+    position:absolute;
+    right:0;
+    top:60px;
+
+    width:55%;
+    height:420px;
+
+    background:black;
+
+    border-top-left-radius:400px;
+    padding:80px 100px;
+
+    color:white;
+}
+
+.info-header small{
+    color:#c7d700;
+    font-weight:600;
+}
+
+.info-header h2{
+    margin-top:30px;
+    font-family:'Cinzel',serif;
+    font-size:38px;
+    line-height:1.6;
+}
+
+.info-header::after{
+    content:"";
+    display:block;
+    width:70%;
+    height:1px;
+    background:#aaa;
+    margin-top:35px;
+}
+
+/* =====================================
+   INFO GRID
+===================================== */
+
+.info-grid{
+    background:black;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+    padding:120px 100px 80px;
+}
+
+.info-card{
+    text-align:center;
+    color:white;
+}
+
+.icon{
+    width:70px;
+    height:70px;
+
+    margin:auto;
+
+    border:2px solid white;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon img{
+    width:35px;
+}
+
+.info-card h3{
+    color:#d7d700;
+    font-family:'Cinzel',serif;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.info-card p{
+    font-size:13px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* =====================================
+   HIGHLIGHTS
+===================================== */
+
+.highlights{
+    background:#dcdcdc;
+    padding:80px 60px;
+}
+
+.highlights h2{
+    font-family:'Cinzel',serif;
+    font-size:48px;
+    margin-bottom:50px;
+}
+
+/* =====================================
+   GALLERY GRID
+===================================== */
+
+.gallery-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:35px;
+}
+
+.gallery-item{
+    background:#ece4e4;
+    padding:20px;
+    border-radius:6px;
+}
+
+.gallery-item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.gallery-item.tall img{
+    height:380px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+    background:black;
+    color:white;
+
+    height:80px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    letter-spacing:2px;
+}
+
+/* =====================================
+   HOVER EFFECTS
+===================================== */
+
+.gallery-item{
+    transition:.4s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px);
+}
+
+.info-card{
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-10px);
+}
+
+.hero-action button{
+    transition:.3s;
+}
+
+.hero-action button:hover{
+    transform:scale(1.05);
+}
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#4ed0ff;
+    border-radius:20px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:1200px){
+
+    .hero-card{
+        width:400px;
+    }
+
+    .info-header{
+        width:65%;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .navbar{
+        flex-direction:column;
+        height:auto;
+        gap:20px;
+        padding:20px;
+    }
+
+    .menu ul{
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .hero{
+        height:450px;
+    }
+
+    .hero-card{
+        position:static;
+        width:100%;
+    }
+
+    .about{
+        padding:50px;
+    }
+
+    .info-header{
+        position:relative;
+        width:100%;
+        border-radius:0;
+        height:auto;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+        padding:60px 30px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h3{
+        font-size:18px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .unesco-title h2{
+        font-size:34px;
+    }
+
+    .highlights h2{
+        font-size:32px;
+    }
+
+    .info-header h2{
+        font-size:28px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .search-box{
+        width:100%;
+    }
+
+    .hero{
+        height:350px;
+    }
+
+    .hero-card{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .about{
+        padding:30px;
+    }
+
+    .highlights{
+        padding:40px 20px;
+    }
+
+    .info-header{
+        padding:40px 30px;
+    }
+
+}

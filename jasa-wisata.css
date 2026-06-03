@@ -25,7 +25,7 @@
   width: 100%;
   height: 100%;
   /* Ganti URL di bawah dengan foto Labuan Bajo landscape */
-  /* background-image: url('public/nama-foto.jpg'); */
+  background-image: url('public/labuan\ bajo\ foto\ 1.jpg');
   background-color: #1a2e1a; /* Warna fallback hijau tua seperti pemandangan */
   background-size: cover;
   background-position: center;
@@ -134,17 +134,7 @@
   overflow: hidden;
 }
 
-.jw-card-img-placeholder::after {
-  content: "📷 Tambahkan foto";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff80;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  pointer-events: none;
-}
+
 
 /* Foto asli jika sudah dimasukkan */
 .jw-card-img {

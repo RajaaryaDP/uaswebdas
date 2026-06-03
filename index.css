@@ -28,7 +28,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #dddddd;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin-top: 170px;
 }
 
@@ -425,11 +425,12 @@ body {
    ========================================== */
 .unesco-section {
   width: 100%;
-  height: 761px;
-  position: relative;
+  height: 100vh;
+  position: sticky;
   display: flex;
   flex-direction: column;
   z-index: 1;
+  top: 0;
 }
 
 .unesco-bg-img {
@@ -489,6 +490,7 @@ body {
   background-position: center;
   overflow: hidden;
   z-index: 2;
+  min-height: 100vh;
 }
 
 /* Decorative background shapes layer (Width 100% to let wave stretch to edge) */
@@ -703,6 +705,7 @@ body {
   background-size: cover;
   background-position: center;
   padding: 85px 0 100px 0;
+  z-index: 2;
 }
 
 .highlights-container {

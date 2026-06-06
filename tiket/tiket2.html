@@ -147,9 +147,9 @@
         <nav class="navbar-sub">
           <div class="navbar-sub-links">
             <a href="../index.html" class="sub-link">HOME</a>
-            <a href="../Explore/Explore.html" class="sub-link">EXPLORE</a>
+            <a href="../Explore/explore.html" class="sub-link">EXPLORE</a>
             <a href="../jasa-wisata.html" class="sub-link">JASA WISATA</a>
-            <a href="#" class="sub-link">GALLERY</a>
+            <a href="../Galllllleery/Galer.html" class="sub-link">GALLERY</a>
             <a href="#" class="sub-link">ABOUT US</a>
           </div>
           <img src="../public/Vector21666-dig.svg" alt="Sub Navigation Line" class="sub-navbar-divider" />
@@ -190,14 +190,6 @@
 
           <!-- Left: Tour Card -->
           <div class="tiket-tour-card">
-            <!-- 
-              ===================================================
-              FOTO TOUR: Letakkan gambar tour di sini
-              Ganti src="" dengan path foto yang diinginkan
-              Contoh: src="../public/nama-foto.jpg"
-              Ukuran ideal: 283 x 195px (atau rasio 3:2)
-              ===================================================
-            -->
             <div class="tour-card-image-wrapper">
               <img src="../public/labuan bajo foto 5.jpg" alt="Sunset Sailing & Dinner" class="tour-card-img"
                 id="tour-card-photo" />
@@ -341,6 +333,19 @@
   </div>
 
   <script>
+    // Handle photo placeholder: hide placeholder if src is set
+    window.addEventListener('DOMContentLoaded', function () {
+      var img = document.getElementById('tour-card-photo');
+      var placeholder = document.getElementById('tour-img-placeholder');
+      if (img && img.src && img.src !== window.location.href) {
+        placeholder.style.display = 'none';
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+        placeholder.style.display = 'flex';
+      }
+    });
+
     // Batal button: go back or to index
     document.getElementById('btn-batal').addEventListener('click', function () {
       if (history.length > 1) {

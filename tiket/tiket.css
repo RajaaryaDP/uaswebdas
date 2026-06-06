@@ -1,0 +1,433 @@
+/* ============================================================
+   TICKET PAGE (tiket.css)
+   Matches design: halaman ticket.png
+   Depends on: ../index.css  (navbar, footer, fonts, .container)
+   ============================================================ */
+
+/* Override body/container background to light grey as shown in design */
+.tiket-page-wrapper {
+  background-color: #dddddd;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   MAIN TICKET PAGE AREA
+   ========================================== */
+.tiket-main {
+  width: 100%;
+  padding: 40px 0 60px 0;
+  background-color: #dddddd;
+}
+
+.tiket-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ==========================================
+   STEP INDICATOR
+   ========================================== */
+.tiket-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 36px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-circle-done {
+  background-color: #3ab0d8;  /* cyan-blue tick circle */
+  color: #ffffff;
+}
+
+.step-circle-active {
+  background-color: #3ab0d8;
+  color: #ffffff;
+}
+
+.step-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.step-label-bold {
+  font-weight: 700;
+}
+
+/* Dashed line between steps */
+.step-line {
+  flex: 1;
+  max-width: 220px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #333 0,
+    #333 8px,
+    transparent 8px,
+    transparent 14px
+  );
+  margin: 0 16px;
+}
+
+/* ==========================================
+   CONTENT ROW: Card + Form Side by Side
+   ========================================== */
+.tiket-content-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* ==========================================
+   LEFT: TOUR CARD
+   ========================================== */
+.tiket-tour-card {
+  width: 283px;
+  min-width: 283px;
+  background-color: #3d3d3d;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Image Area */
+.tour-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 195px;
+  background-color: #555555;
+  overflow: hidden;
+}
+
+.tour-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder shown when no photo is provided */
+.tour-card-img-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #555555;
+  color: #aaaaaa;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 14px;
+}
+
+/* Card Text Area */
+.tour-card-info {
+  padding: 14px 18px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tour-card-duration {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 12px;
+  font-weight: 400;
+  color: #cccccc;
+  letter-spacing: 0.3px;
+}
+
+.tour-card-title {
+  font-family: var(--font-inria-serif, "Inria Serif", serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-top: 4px;
+}
+
+.tour-card-desc {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #bbbbbb;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.tour-card-price-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+.tour-card-from {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 400;
+  color: #cccccc;
+}
+
+.tour-card-price {
+  font-family: var(--font-inria-serif, "Inria Serif", serif);
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   RIGHT: BOOKING FORM CARD
+   ========================================== */
+.tiket-form-card {
+  flex: 1;
+  background-color: #808080;
+  border-radius: 10px;
+  padding: 32px 36px 36px 36px;
+  min-width: 0;
+}
+
+.form-title {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Warning / Alert Banner */
+.form-warning-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid #e74c3c;
+  border-radius: 6px;
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  color: #e74c3c;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form-warning-icon {
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   FORM GROUPS & INPUTS
+   ========================================== */
+.tiket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  height: 38px;
+  background-color: #d9d9d9;
+  border: 1.5px solid #b0b0b0;
+  border-radius: 4px;
+  padding: 0 12px;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 14px;
+  color: #222222;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-input:focus {
+  border-color: #3ab0d8;
+  background-color: #e8f7fb;
+}
+
+/* Select (dropdown) — custom arrow */
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23444' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+  cursor: pointer;
+}
+
+/* Wider full-width dropdown */
+.form-select:not(.form-phone-code) {
+  width: 260px;
+}
+
+/* Hint text under inputs */
+.form-hint {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 12px;
+  color: #f0f0f0;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* Phone row: code dropdown + number input side by side */
+.form-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-phone-code {
+  width: 110px;
+  min-width: 110px;
+  flex-shrink: 0;
+}
+
+.form-phone-number {
+  width: 200px;
+}
+
+/* Half-width input (Jumlah Peserta) */
+.form-input-half {
+  width: 220px;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+   ========================================== */
+.form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.form-btn {
+  height: 44px;
+  min-width: 110px;
+  padding: 0 28px;
+  border-radius: 5px;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.18s, transform 0.12s;
+}
+
+.form-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.form-btn:active {
+  transform: translateY(0);
+}
+
+/* Batal – Red/Pink */
+.btn-batal {
+  background-color: #e8175d;
+  color: #ffffff;
+}
+
+/* Reset – Light grey */
+.btn-reset {
+  background-color: #c5c5c5;
+  color: #222222;
+}
+
+/* Simpan – Green */
+.btn-simpan {
+  background-color: #27ae60;
+  color: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 900px) {
+  .tiket-content-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tiket-tour-card {
+    width: 100%;
+    min-width: unset;
+    max-width: 400px;
+  }
+
+  .tiket-container {
+    padding: 0 24px;
+  }
+
+  .form-select:not(.form-phone-code) {
+    width: 100%;
+  }
+
+  .form-input-half {
+    width: 100%;
+  }
+
+  .form-phone-number {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tiket-form-card {
+    padding: 22px 18px 24px 18px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .step-line {
+    max-width: 80px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-btn {
+    width: 100%;
+  }
+}

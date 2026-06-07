@@ -1,0 +1,567 @@
+/* ============================================================
+   PAYMENT PAGE (pembayaran.css)
+   Matches design for payment page
+   Depends on: ../index.css  (navbar, footer, fonts, .container)
+   ============================================================ */
+
+/* Override body/container background to light grey */
+.pembayaran-page-wrapper {
+  background-color: #dddddd;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   MAIN PAYMENT PAGE AREA
+   ========================================== */
+.pembayaran-main {
+  width: 100%;
+  padding: 40px 0 60px 0;
+  background-color: #dddddd;
+}
+
+.pembayaran-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ==========================================
+   STEP INDICATOR (reuse from tiket.css)
+   ========================================== */
+.tiket-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 36px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-circle-done {
+  background-color: #3ab0d8;  /* cyan-blue tick circle */
+  color: #ffffff;
+}
+
+.step-circle-active {
+  background-color: #3ab0d8;
+  color: #ffffff;
+}
+
+.step-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.step-label-bold {
+  font-weight: 700;
+}
+
+/* Dashed line between steps */
+.step-line {
+  flex: 1;
+  max-width: 220px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #333 0,
+    #333 8px,
+    transparent 8px,
+    transparent 14px
+  );
+  margin: 0 16px;
+}
+
+/* ==========================================
+   CONTENT ROW: Summary + Form Side by Side
+   ========================================== */
+.pembayaran-content-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* ==========================================
+   PAYMENT SUMMARY CARD (LEFT)
+   ========================================== */
+.pembayaran-summary-card {
+  flex: 0 0 auto;
+  width: 340px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-title {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tour Info Section */
+.summary-tour-info {
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.tour-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.tour-info-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.tour-info-value {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  text-align: right;
+  flex: 1;
+}
+
+/* Divider */
+.summary-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+/* Pricing Section */
+.summary-pricing {
+  gap: 10px;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.pricing-row-discount {
+  color: #27ae60;
+}
+
+.pricing-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.pricing-label-discount {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.pricing-value {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.pricing-value-discount {
+  color: #27ae60;
+}
+
+/* Discount Badge */
+.discount-badge {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.badge-text {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Total Section */
+.summary-total {
+  background-color: #3ab0d8;
+  padding: 16px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.total-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.total-value {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ==========================================
+   PAYMENT FORM CARD (RIGHT)
+   ========================================== */
+.pembayaran-form-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Info Banner */
+.form-info-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.form-info-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.form-info-banner span {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  color: #1976d2;
+}
+
+/* Form Elements */
+.pembayaran-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.form-input {
+  padding: 12px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3ab0d8;
+  box-shadow: 0 0 0 3px rgba(58, 176, 216, 0.1);
+}
+
+.form-input::placeholder {
+  color: #999999;
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23333' d='M0 0l6 8 6-8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.form-hint {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 12px;
+  color: #999999;
+  margin-top: 2px;
+}
+
+/* Two Column Layout */
+.form-row-2cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-row-expiry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-input-expiry {
+  flex: 1;
+  padding: 12px 10px;
+}
+
+.expiry-separator {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  padding: 0 2px;
+}
+
+/* Checkbox */
+.form-group-checkbox {
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 8px 0;
+}
+
+.form-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  cursor: pointer;
+  accent-color: #3ab0d8;
+}
+
+.checkbox-label {
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 13px;
+  color: #333333;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+/* Form Buttons */
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.form-btn {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-inter, "Inter", sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-kembali {
+  background-color: #e0e0e0;
+  color: #333333;
+  border: 1px solid #cccccc;
+}
+
+.btn-kembali:hover {
+  background-color: #d0d0d0;
+}
+
+.btn-bayar {
+  background-color: #27ae60;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-bayar:hover {
+  background-color: #229954;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.btn-bayar:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 1024px) {
+  .pembayaran-container {
+    padding: 0 30px;
+  }
+
+  .pembayaran-content-row {
+    flex-direction: column;
+  }
+
+  .pembayaran-summary-card {
+    width: 100%;
+  }
+
+  .pembayaran-form-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pembayaran-container {
+    padding: 0 20px;
+  }
+
+  .pembayaran-main {
+    padding: 30px 0 40px 0;
+  }
+
+  .tiket-steps {
+    margin-bottom: 28px;
+  }
+
+  .step-line {
+    max-width: 100px;
+    margin: 0 8px;
+  }
+
+  .step-label,
+  .step-label-bold {
+    font-size: 14px;
+  }
+
+  .pembayaran-summary-card {
+    padding: 20px;
+  }
+
+  .summary-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .pembayaran-form-card {
+    padding: 20px;
+  }
+
+  .form-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .form-row-2cols {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pembayaran-container {
+    padding: 0 16px;
+  }
+
+  .tiket-steps {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .step-line {
+    display: none;
+  }
+
+  .pembayaran-summary-card {
+    padding: 16px;
+  }
+
+  .summary-title {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .pembayaran-form-card {
+    padding: 16px;
+  }
+
+  .form-title {
+    font-size: 16px;
+  }
+
+  .form-info-banner {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}

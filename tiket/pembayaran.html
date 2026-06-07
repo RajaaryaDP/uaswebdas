@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Pembayaran – Labuan Bajo</title>
+  <meta property="og:title" content="Pembayaran – Labuan Bajo" />
+  <meta name="description" content="Proses pembayaran untuk tiket wisata Labuan Bajo." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+      color: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <!-- Fonts from index.html -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Irish+Grover:wght@400&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,900;1,100;1,900&display=swap" />
+
+  <!-- Shared CSS from parent -->
+  <link rel="stylesheet" href="../index.css" />
+  <!-- Payment-specific styles -->
+  <link rel="stylesheet" href="pembayaran.css" />
+</head>
+
+<body>
+  <div class="mac-book-air1-container1 pembayaran-page-wrapper">
+
+    <!-- ===== NAVBAR (copied from index.html) ===== -->
+    <header class="navbar-container">
+      <div class="container navbar-container-inner">
+        <div class="navbar-top">
+
+          <!-- Search (Left) -->
+          <div class="navbar-search">
+            <div class="search-icon-container">
+              <img src="../public/Vector3121-kprc.svg" alt="Search Vector 1" class="search-icon-vector-1" />
+              <img src="../public/Vector3121-p09o.svg" alt="Search Vector 2" class="search-icon-vector-2" />
+            </div>
+            <span class="search-text">Search</span>
+          </div>
+
+          <!-- Logo (Center) -->
+          <img src="../public/image23114-3tj.png" alt="Logo" class="navbar-logo" />
+
+          <!-- Actions (Right) -->
+          <div class="navbar-actions">
+            <div class="nav-btn store-btn">
+              <img src="../public/fluentmdl2visualsstore1677-12c.svg" alt="Store Icon" class="nav-btn-icon" />
+              <span>Store</span>
+            </div>
+            <div class="nav-btn tickets-btn">
+              <img src="../public/ionticket1659-njih.svg" alt="Ticket Icon" class="nav-btn-icon" />
+              <span>Tickets</span>
+            </div>
+          </div>
+
+        </div>
+
+        <img src="../public/Vector154-6zuy.svg" alt="Divider Vector" class="navbar-divider" />
+
+        <!-- Sub Navigation -->
+        <nav class="navbar-sub">
+          <div class="navbar-sub-links">
+            <a href="../index.html" class="sub-link">HOME</a>
+            <a href="../Explore/explore.html" class="sub-link">EXPLORE</a>
+            <a href="../jasa-wisata.html" class="sub-link">JASA WISATA</a>
+            <a href="../Galllllleery/Galer.html" class="sub-link">GALLERY</a>
+            <a href="../about.html" class="sub-link">ABOUT US</a>
+          </div>
+          <img src="../public/Vector21666-dig.svg" alt="Sub Navigation Line" class="sub-navbar-divider" />
+        </nav>
+      </div>
+    </header>
+    <!-- ===== END NAVBAR ===== -->
+
+    <!-- ===== PAYMENT PAGE MAIN CONTENT ===== -->
+    <main class="pembayaran-main">
+      <div class="pembayaran-container">
+
+        <!-- Step Indicator -->
+        <div class="tiket-steps">
+          <div class="step step-done">
+            <div class="step-circle step-circle-done">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8L6.5 11.5L13 5" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <span class="step-label">Pilihan Anda</span>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step step-done">
+            <div class="step-circle step-circle-done">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8L6.5 11.5L13 5" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <span class="step-label">Masukan Rincian</span>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step step-active">
+            <div class="step-circle step-circle-active">
+              <span>3</span>
+            </div>
+            <span class="step-label step-label-bold">Pembayaran</span>
+          </div>
+        </div>
+        <!-- End Step Indicator -->
+
+        <!-- Main Content Row: Summary + Payment Form -->
+        <div class="pembayaran-content-row">
+
+          <!-- Left: Payment Summary -->
+          <div class="pembayaran-summary-card">
+            <h2 class="summary-title">Ringkasan Pesanan</h2>
+
+            <div class="summary-content">
+              <!-- Tour Info -->
+              <div class="summary-section summary-tour-info">
+                <div class="tour-info-row">
+                  <span class="tour-info-label">Paket Wisata:</span>
+                  <span class="tour-info-value" id="tour-name">Sightseeing and Relax Your Mind</span>
+                </div>
+                <div class="tour-info-row">
+                  <span class="tour-info-label">Durasi:</span>
+                  <span class="tour-info-value">1 Days · 1 Nights</span>
+                </div>
+                <div class="tour-info-row">
+                  <span class="tour-info-label">Harga per Peserta:</span>
+                  <span class="tour-info-value" id="harga-per-peserta">IDR 1.490.000</span>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="summary-divider"></div>
+
+              <!-- Pricing Breakdown -->
+              <div class="summary-section summary-pricing">
+                <div class="pricing-row">
+                  <span class="pricing-label">Jumlah Peserta:</span>
+                  <span class="pricing-value" id="summary-jumlah-peserta">0</span>
+                </div>
+
+                <div class="pricing-row">
+                  <span class="pricing-label">Subtotal:</span>
+                  <span class="pricing-value" id="summary-subtotal">IDR 0</span>
+                </div>
+
+                <!-- Discount Section (hidden by default) -->
+                <div class="pricing-row pricing-row-discount" id="discount-section" style="display: none;">
+                  <span class="pricing-label pricing-label-discount">Diskon (15%):</span>
+                  <span class="pricing-value pricing-value-discount" id="summary-discount">-IDR 0</span>
+                </div>
+
+                <!-- Discount Badge -->
+                <div class="discount-badge" id="discount-badge" style="display: none;">
+                  <span class="badge-text">🎉 Hemat 15%!</span>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="summary-divider"></div>
+
+              <!-- Total -->
+              <div class="summary-section summary-total">
+                <div class="total-row">
+                  <span class="total-label">Total Pembayaran:</span>
+                  <span class="total-value" id="summary-total">IDR 0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Payment Summary -->
+
+          <!-- Right: Payment Form -->
+          <div class="pembayaran-form-card">
+            <h2 class="form-title">Informasi Pembayaran</h2>
+
+            <!-- Info Banner -->
+            <div class="form-info-banner">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="form-info-icon">
+                <circle cx="10" cy="10" r="9" stroke="#3ab0d8" stroke-width="1.5" />
+                <path d="M10 6V10" stroke="#3ab0d8" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="10" cy="13.5" r="0.75" fill="#3ab0d8" />
+              </svg>
+              <span>Masukkan detail pembayaran Anda dengan benar</span>
+            </div>
+
+            <form class="pembayaran-form" id="pembayaran-form" onsubmit="handlePaymentSubmit(event);">
+
+              <!-- Nama Pemilik Kartu -->
+              <div class="form-group">
+                <label class="form-label" for="kartu-nama">Nama Pemilik Kartu</label>
+                <input type="text" id="kartu-nama" name="kartu-nama" class="form-input" placeholder="Nama sesuai kartu"
+                  required />
+              </div>
+
+              <!-- Nomor Kartu Kredit -->
+              <div class="form-group">
+                <label class="form-label" for="kartu-nomor">Nomor Kartu Kredit</label>
+                <input type="text" id="kartu-nomor" name="kartu-nomor" class="form-input" placeholder="1234 5678 9012 3456"
+                  maxlength="19" required />
+                <span class="form-hint">Format: XXXX XXXX XXXX XXXX</span>
+              </div>
+
+              <!-- Tanggal Kadaluarsa & CVV -->
+              <div class="form-row-2cols">
+                <div class="form-group">
+                  <label class="form-label" for="kartu-bulan">Tanggal Kadaluarsa</label>
+                  <div class="form-row-expiry">
+                    <select id="kartu-bulan" name="kartu-bulan" class="form-input form-select form-input-expiry"
+                      required>
+                      <option value="" disabled selected>Bulan</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <span class="expiry-separator">/</span>
+                    <select id="kartu-tahun" name="kartu-tahun" class="form-input form-select form-input-expiry"
+                      required>
+                      <option value="" disabled selected>Tahun</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="kartu-cvv">CVV</label>
+                  <input type="text" id="kartu-cvv" name="kartu-cvv" class="form-input" placeholder="123" maxlength="3"
+                    required />
+                </div>
+              </div>
+
+              <!-- Email untuk Konfirmasi -->
+              <div class="form-group">
+                <label class="form-label" for="pembayaran-email">Email untuk Konfirmasi</label>
+                <input type="email" id="pembayaran-email" name="pembayaran-email" class="form-input"
+                  placeholder="email@example.com" required />
+                <span class="form-hint">Bukti pembayaran akan dikirim ke email ini</span>
+              </div>
+
+              <!-- Checkbox Terms -->
+              <div class="form-group form-group-checkbox">
+                <input type="checkbox" id="agree-terms" name="agree-terms" class="form-checkbox" required />
+                <label class="checkbox-label" for="agree-terms">Saya setuju dengan syarat dan ketentuan pembayaran</label>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="form-buttons">
+                <button type="button" id="btn-kembali" class="form-btn btn-kembali">Kembali</button>
+                <button type="submit" id="btn-bayar" class="form-btn btn-bayar">Bayar Sekarang</button>
+              </div>
+
+            </form>
+          </div>
+          <!-- End Payment Form -->
+
+        </div>
+        <!-- End Content Row -->
+
+      </div>
+    </main>
+    <!-- ===== END PAYMENT MAIN CONTENT ===== -->
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-container">
+      <div class="container footer-container-inner">
+        <span class="footer-copyright">COPYRIGHT BY ARYAH</span>
+      </div>
+    </footer>
+    <!-- ===== END FOOTER ===== -->
+
+  </div>
+
+  <script>
+    // Constants
+    let HARGA_PER_PESERTA = 1490000;
+    const DISKON_PERSEN = 15;
+    const JUMLAH_PESERTA_MINIMUM_DISKON = 3;
+
+    function formatRupiah(amount) {
+      return 'IDR ' + new Intl.NumberFormat('id-ID').format(amount);
+    }
+
+    // Initialize from localStorage
+    document.addEventListener('DOMContentLoaded', function () {
+      loadFormData();
+      calculatePayment();
+    });
+
+    // Load data from localStorage
+    function loadFormData() {
+      const savedData = JSON.parse(localStorage.getItem('formData')) || {};
+      const jumlahPeserta = savedData.jumlahPeserta || 0;
+      document.getElementById('summary-jumlah-peserta').textContent = jumlahPeserta;
+      document.getElementById('tour-name').textContent = savedData.packageName || 'Sightseeing and Relax Your Mind';
+      const packagePrice = savedData.packagePrice || HARGA_PER_PESERTA;
+      document.getElementById('harga-per-peserta').textContent = formatRupiah(packagePrice);
+      HARGA_PER_PESERTA = packagePrice;
+    }
+
+    // Calculate payment dynamically
+    function calculatePayment() {
+      const savedData = JSON.parse(localStorage.getItem('formData')) || {};
+      const jumlahPeserta = parseInt(savedData.jumlahPeserta) || 0;
+      const packagePrice = savedData.packagePrice || HARGA_PER_PESERTA;
+
+      // Subtotal
+      const subtotal = jumlahPeserta * packagePrice;
+
+      // Check for discount eligibility
+      const isDiskonEligible = jumlahPeserta >= JUMLAH_PESERTA_MINIMUM_DISKON;
+
+      // Calculate discount
+      let diskon = 0;
+      let total = subtotal;
+
+      if (isDiskonEligible) {
+        diskon = Math.round((subtotal * DISKON_PERSEN) / 100);
+        total = subtotal - diskon;
+      }
+
+      // Update DOM
+      document.getElementById('summary-jumlah-peserta').textContent = jumlahPeserta;
+      document.getElementById('summary-subtotal').textContent = formatRupiah(subtotal);
+      document.getElementById('summary-discount').textContent = '-' + formatRupiah(diskon);
+      document.getElementById('summary-total').textContent = formatRupiah(total);
+
+      // Show/hide discount section and badge
+      const discountSection = document.getElementById('discount-section');
+      const discountBadge = document.getElementById('discount-badge');
+
+      if (isDiskonEligible) {
+        discountSection.style.display = 'flex';
+        discountBadge.style.display = 'block';
+      } else {
+        discountSection.style.display = 'none';
+        discountBadge.style.display = 'none';
+      }
+
+      // Store payment data
+      localStorage.setItem('paymentData', JSON.stringify({
+        jumlahPeserta,
+        subtotal,
+        diskon,
+        total,
+        isDiskonEligible
+      }));
+    }
+
+    // Format card number
+    document.getElementById('kartu-nomor').addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\s/g, '');
+      let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+      e.target.value = formattedValue;
+    });
+
+    // CVV only accepts numbers
+    document.getElementById('kartu-cvv').addEventListener('input', function (e) {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    });
+
+    // Handle payment form submission
+    function handlePaymentSubmit(event) {
+      event.preventDefault();
+
+      const formData = {
+        kartunama: document.getElementById('kartu-nama').value,
+        kartuNomor: document.getElementById('kartu-nomor').value.replace(/\s/g, ''),
+        kartuBulan: document.getElementById('kartu-bulan').value,
+        kartuTahun: document.getElementById('kartu-tahun').value,
+        kartuCvv: document.getElementById('kartu-cvv').value,
+        email: document.getElementById('pembayaran-email').value,
+        agreeTerms: document.getElementById('agree-terms').checked
+      };
+
+      // Validate CVV is exactly 3 digits
+      if (!/^\d{3}$/.test(formData.kartuCvv)) {
+        alert('CVV harus 3 digit');
+        return;
+      }
+
+      // Validate card number is 16 digits
+      if (!/^\d{16}$/.test(formData.kartuNomor)) {
+        alert('Nomor kartu tidak valid (harus 16 digit)');
+        return;
+      }
+
+      // For demo purposes, save payment details
+      localStorage.setItem('paymentSubmitted', JSON.stringify({
+        ...formData,
+        timestamp: new Date().toISOString(),
+        paymentData: JSON.parse(localStorage.getItem('paymentData'))
+      }));
+
+      // Show success message
+      alert('✅ Pembayaran berhasil diproses!\n\nBukti pembayaran akan dikirim ke email Anda.\nTerima kasih telah memesan paket wisata kami!');
+
+      // Reset form and redirect
+      document.getElementById('pembayaran-form').reset();
+      localStorage.removeItem('formData');
+      localStorage.removeItem('paymentData');
+      setTimeout(() => {
+        window.location.href = '../index.html';
+      }, 2000);
+    }
+
+    // Kembali button
+    document.getElementById('btn-kembali').addEventListener('click', function () {
+      // Go back to ticket form
+      if (history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = 'tiket1.html';
+      }
+    });
+  </script>
+</body>
+
+</html>

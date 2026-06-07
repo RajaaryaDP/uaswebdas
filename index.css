@@ -596,9 +596,10 @@ body {
 .guide-header-block {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center texts inside the heading block */
+  align-items: left; /* Center texts inside the heading block */
   width: 336px;
   margin-top: 72px; /* Exact spacing from design */
+  margin-right: 20px;
 }
 
 .guide-sub-heading-1 {

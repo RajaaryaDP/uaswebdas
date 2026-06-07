@@ -204,7 +204,7 @@
               </p>
               <div class="tour-card-price-block">
                 <span class="tour-card-from">From</span>
-                <span class="tour-card-price">$480</span>
+                <span class="tour-card-price">IDR 1.490.000</span>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@
               <span>Mohon hati-hati dalam mengisi informasi !!!</span>
             </div>
 
-            <form class="tiket-form" id="tiket-form" onsubmit="return false;">
+            <form class="tiket-form" id="tiket-form">
 
               <!-- Nama Lengkap -->
               <div class="form-group">
@@ -332,6 +332,59 @@
   </div>
 
   <script>
+    // Form validation and submission
+    document.getElementById('tiket-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Validate required fields
+      const namaLengkap = document.getElementById('nama-lengkap').value.trim();
+      const alamatEmail = document.getElementById('alamat-email').value.trim();
+      const negaraWilayah = document.getElementById('negara-wilayah').value;
+      const nomorTelepon = document.getElementById('nomor-telepon').value.trim();
+      const jumlahPeserta = document.getElementById('jumlah-peserta').value;
+      const nomorTeleponPeserta = document.getElementById('nomor-telepon-peserta').value.trim();
+
+      if (!namaLengkap || !alamatEmail || !negaraWilayah || !nomorTelepon || !jumlahPeserta || !nomorTeleponPeserta) {
+        alert('⚠️ Mohon lengkapi semua field yang diperlukan!');
+        return;
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(alamatEmail)) {
+        alert('⚠️ Format email tidak valid!');
+        return;
+      }
+
+      // Validate jumlah peserta is positive
+      if (parseInt(jumlahPeserta) <= 0) {
+        alert('⚠️ Jumlah peserta harus lebih dari 0!');
+        return;
+      }
+
+      // Save form data to localStorage
+      const packageName = document.querySelector('.tour-card-title')?.textContent.trim() || '';
+      const packagePriceText = document.querySelector('.tour-card-price')?.textContent.trim() || '';
+      const packagePrice = parseInt(packagePriceText.replace(/[^0-9]/g, '')) || 0;
+
+      const formData = {
+        namaLengkap: namaLengkap,
+        alamatEmail: alamatEmail,
+        negaraWilayah: negaraWilayah,
+        nomorTelepon: document.getElementById('kode-negara').value + ' ' + nomorTelepon,
+        jumlahPeserta: parseInt(jumlahPeserta),
+        nomorTeleponPeserta: document.getElementById('kode-negara-peserta').value + ' ' + nomorTeleponPeserta,
+        packageName: packageName,
+        packagePriceText: packagePriceText,
+        packagePrice: packagePrice
+      };
+
+      localStorage.setItem('formData', JSON.stringify(formData));
+
+      // Redirect to payment page
+      window.location.href = 'pembayaran.html';
+    });
+
     // Batal button: go back or to index
     document.getElementById('btn-batal').addEventListener('click', function () {
       if (history.length > 1) {
@@ -339,6 +392,11 @@
       } else {
         window.location.href = '../index.html';
       }
+    });
+
+    // Reset button clears localStorage as well
+    document.getElementById('btn-reset').addEventListener('click', function () {
+      localStorage.removeItem('formData');
     });
   </script>
 </body>

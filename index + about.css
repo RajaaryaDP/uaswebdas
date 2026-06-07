@@ -84,44 +84,7 @@ body {
   padding: 0 30px;
 }
 
-/* Left search item */
-.navbar-search {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-}
 
-.search-icon-container {
-  position: relative;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  overflow: hidden;
-}
-
-.search-icon-vector-1 {
-  position: absolute;
-  top: 0px;
-  left: 8.75px;
-  width: 18px;
-  height: 18px;
-}
-
-.search-icon-vector-2 {
-  position: absolute;
-  top: 15.3px;
-  left: 0px;
-  width: 11px;
-  height: 11px;
-}
-
-.search-text {
-  color: #ffffff;
-  font-size: 20px;
-  font-family: var(--font-inter);
-  font-weight: 400;
-}
 
 /* Logo (Visually centered relative to navbar-top container) */
 .navbar-logo {
@@ -138,6 +101,7 @@ body {
   display: flex;
   align-items: center;
   gap: 13px;
+  margin-left: auto;
 }
 
 .nav-btn {
@@ -379,7 +343,8 @@ body {
    ========================================== */
 .intro-section {
   width: 100%;
-  background-color: var(--dl-color-theme-neutral-light); /* #FBFAF9 */
+  background-color: var(--dl-color-theme-neutral-light);
+  /* #FBFAF9 */
   padding: 80px 0;
   display: flex;
   justify-content: center;
@@ -390,7 +355,8 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
-  padding: 0 92px; /* 140px left padding inside original box matches ~92px inside container */
+  padding: 0 92px;
+  /* 140px left padding inside original box matches ~92px inside container */
 }
 
 .intro-header {
@@ -561,7 +527,8 @@ body {
 .guide-container {
   position: relative;
   z-index: 3;
-  padding-top: 83px; /* Exact top starting point for titles */
+  padding-top: 83px;
+  /* Exact top starting point for titles */
 }
 
 /* Align Header column block to the right (leaving curves on the left) */
@@ -571,7 +538,8 @@ body {
   width: 100%;
   position: relative;
   z-index: 2;
-  padding-right: 52px; /* 1280px container minus 1228px right edge = 52px */
+  padding-right: 52px;
+  /* 1280px container minus 1228px right edge = 52px */
 }
 
 .guide-top-right-content {
@@ -596,9 +564,11 @@ body {
 .guide-header-block {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center texts inside the heading block */
+  align-items: center;
+  /* Center texts inside the heading block */
   width: 336px;
-  margin-top: 72px; /* Exact spacing from design */
+  margin-top: 72px;
+  /* Exact spacing from design */
 }
 
 .guide-sub-heading-1 {
@@ -621,14 +591,17 @@ body {
 .guide-content-divider {
   width: 418px;
   height: 1px;
-  margin-top: 34px; /* Exact spacing from design */
+  margin-top: 34px;
+  /* Exact spacing from design */
 }
 
 /* Info Cards Horizontal Row with exact spacings */
 .guide-cards-container {
   display: flex;
-  margin-top: 92px; /* Exact vertical distance from divider to cards */
-  padding-left: 101px; /* 149px absolute left minus 48px container padding */
+  margin-top: 92px;
+  /* Exact vertical distance from divider to cards */
+  padding-left: 101px;
+  /* 149px absolute left minus 48px container padding */
   position: relative;
   z-index: 2;
 }
@@ -641,12 +614,14 @@ body {
 
 .guide-card:nth-child(1) {
   width: 322px;
-  margin-right: 71px; /* Gap between Card 1 and Card 2 is 71px */
+  margin-right: 71px;
+  /* Gap between Card 1 and Card 2 is 71px */
 }
 
 .guide-card:nth-child(2) {
   width: 322px;
-  margin-right: 52px; /* Gap between Card 2 and Card 3 is 52px */
+  margin-right: 52px;
+  /* Gap between Card 2 and Card 3 is 52px */
 }
 
 .guide-card:nth-child(3) {
@@ -719,7 +694,8 @@ body {
   font-family: var(--font-inika);
   font-weight: 400;
   margin-bottom: 48px;
-  padding-left: 44px; /* Matches 92px left coordinate from original mockup */
+  padding-left: 44px;
+  /* Matches 92px left coordinate from original mockup */
 }
 
 /* Highlights Grid (Matched to columns) */
@@ -728,7 +704,8 @@ body {
   position: relative;
   z-index: 2;
   margin-top: 48px;
-  padding-left: 44px; /* 92px absolute - 48px container padding = 44px */
+  padding-left: 44px;
+  /* 92px absolute - 48px container padding = 44px */
 }
 
 .gallery-column {
@@ -739,15 +716,18 @@ body {
 }
 
 .gallery-column:nth-child(2) {
-  margin-left: 59px; /* Gap between Col 1 and Col 2 is 59px */
+  margin-left: 59px;
+  /* Gap between Col 1 and Col 2 is 59px */
 }
 
 .gallery-column:nth-child(3) {
-  margin-left: 41px; /* Gap between Col 2 and Col 3 is 41px */
+  margin-left: 41px;
+  /* Gap between Col 2 and Col 3 is 41px */
 }
 
 .gallery-column:nth-child(4) {
-  margin-left: 41px; /* Gap between Col 3 and Col 4 is 41px */
+  margin-left: 41px;
+  /* Gap between Col 3 and Col 4 is 41px */
 }
 
 /* Asymmetrical layout offset for Column 4 */
@@ -943,7 +923,8 @@ body {
   .guide-section {
     height: auto;
     background-image: none;
-    background-color: #0d1e3d; /* Matches vector base theme */
+    background-color: #0d1e3d;
+    /* Matches vector base theme */
     padding-bottom: 60px;
   }
 
@@ -1248,7 +1229,7 @@ body {
   letter-spacing: 1px;
 }
 
-.about-image-block{
+.about-image-block {
   flex-shrink: 0;
   margin-left: -160px;
   margin-top: -50px;
@@ -1259,7 +1240,7 @@ body {
   height: 475px;
   object-fit: fill;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 /* ==========================================
@@ -1440,6 +1421,7 @@ body {
 
 /* About/Contact Responsive */
 @media (max-width: 768px) {
+
   .about-content-row,
   .contact-content-row {
     flex-direction: column;
@@ -1485,8 +1467,13 @@ body {
 }
 
 @keyframes popupFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .popup-card {
@@ -1499,13 +1486,20 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   animation: popupSlideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @keyframes popupSlideUp {
-  from { transform: translateY(30px) scale(0.96); opacity: 0; }
-  to   { transform: translateY(0)    scale(1);    opacity: 1; }
+  from {
+    transform: translateY(30px) scale(0.96);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .popup-icon-wrap {
